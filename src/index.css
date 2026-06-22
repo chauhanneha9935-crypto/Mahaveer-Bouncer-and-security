@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Global Base Layer Adjustments */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 3D Hero Glass-Glare Animation Hook */
+@keyframes shine {
+  0% {
+    transform: skewX(-12deg) translateX(-100%);
+  }
+  100% {
+    transform: skewX(-12deg) translateX(100%);
+  }
+}
+
+/* Custom Utility configuration for Tailwind v4 custom animations */
+@utility animate-shine {
+  animation: shine 1.5s ease-in-out infinite;
+}
