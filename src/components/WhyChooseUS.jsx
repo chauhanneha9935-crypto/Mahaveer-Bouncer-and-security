@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Explicitly importing your verified files from your src/assets directory
-import guard1 from '../assets/guard1.jpg';
-import staff from '../assets/staff.jpeg';
-import guard4 from '../assets/bodyguard1.avif'; 
 import quickDeployment from '../assets/quick_deployment.png';
 import support24x7 from '../assets/support_24x7.png';
 import trainedProfessionals from '../assets/trained_professionals.png';
