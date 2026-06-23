@@ -4,6 +4,14 @@ import React, { useState } from 'react';
 import guard1 from '../assets/guard1.jpg';
 import staff from '../assets/staff.jpeg';
 import guard4 from '../assets/bodyguard1.avif'; 
+import quickDeployment from '../assets/quick_deployment.png';
+import support24x7 from '../assets/support_24x7.png';
+import trainedProfessionals from '../assets/trained_professionals.png';
+import verifiedStaff from '../assets/verified_staff.png';
+import tacticalBouncer from '../assets/tactical_bouncer_unit.png';
+import officeSecurity from '../assets/office_security.png';
+import industrialSecurity from '../assets/industrial_security.png';
+import residentialSecurity from '../assets/residential_security.png';
 
 export default function WhyChooseUs() {
   // Tracking state to hold information when an advantage card is actively selected
@@ -13,7 +21,7 @@ export default function WhyChooseUs() {
     { 
       title: "Background Verified Personnel", 
       desc: "Trained, uniformed and police-verified guards for static posts...",
-      img: guard1,
+      img: verifiedStaff,
       code: "AUTH-NOD-01",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -33,7 +41,7 @@ export default function WhyChooseUs() {
     { 
       title: "Professionally Trained Staff", 
       desc: "Elite physical conflict de-escalation and advanced countermeasure metrics.",
-      img: staff,
+      img: trainedProfessionals,
       code: "TRN-TACT-02",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -53,7 +61,7 @@ export default function WhyChooseUs() {
     { 
       title: "Quick Staff Deployment", 
       desc: "Instant standby networks engineered for immediate protective reinforcement.",
-      img: "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=600&q=80",
+      img: quickDeployment,
       code: "DEP-FAST-03",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -73,7 +81,7 @@ export default function WhyChooseUs() {
     { 
       title: "24/7 Monitoring Support", 
       desc: "Continuous secure operations link lines feeding real-time situational logs.",
-      img: guard4,
+      img: support24x7,
       code: "MON-LIVE-04",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -93,7 +101,7 @@ export default function WhyChooseUs() {
     { 
       title: "Uniformed Security Officers", 
       desc: "Polished, elite high-visibility protective uniforms to assert complete deterrence.",
-      img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80",
+      img: tacticalBouncer,
       code: "UNI-FORM-05",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -113,7 +121,7 @@ export default function WhyChooseUs() {
     { 
       title: "Experienced Management", 
       desc: "Strategic operations directed by field veterans and corporate tactical specialists.",
-      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+      img: officeSecurity,
       code: "MNG-EXEC-06",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -133,7 +141,7 @@ export default function WhyChooseUs() {
     { 
       title: "Affordable Pricing", 
       desc: "Transparent blueprints without dynamic surcharges or hidden modifications.",
-      img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+      img: industrialSecurity,
       code: "VAL-COST-07",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -153,7 +161,7 @@ export default function WhyChooseUs() {
     { 
       title: "Reliable & Trustworthy", 
       desc: "Maintaining strict structural accountability rules across all domestic teams.",
-      img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
+      img: residentialSecurity,
       code: "TRST-SYS-08",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -206,13 +214,11 @@ export default function WhyChooseUs() {
               {/* Clean Image Canvas Face */}
               <div className="absolute inset-0 z-0 block overflow-hidden">
                 <div 
-                  className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 ${
-                    adv.img === guard1 || adv.img === guard4 || adv.img === staff ? 'opacity-90' : 'opacity-40'
-                  }`}
+                  className="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-75 group-hover:opacity-95 group-hover:scale-105"
                   style={{ backgroundImage: `url('${adv.img}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
               </div>
 
               {/* Foreground Card Elements */}
@@ -269,6 +275,16 @@ export default function WhyChooseUs() {
               >
                 ✕
               </button>
+            </div>
+
+            {/* Modal Image Banner */}
+            <div className="w-full h-48 sm:h-56 rounded-2xl overflow-hidden mb-6 relative border border-zinc-800/80">
+              <img 
+                src={activeAdvantage.img} 
+                alt={activeAdvantage.title} 
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             </div>
 
             {/* Specification Parameters */}
