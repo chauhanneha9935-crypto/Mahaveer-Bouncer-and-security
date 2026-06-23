@@ -177,7 +177,7 @@ export default function Hero() {
                 */}
                 <video
                   ref={videoRef}
-                  src="https://v.ftcdn.net/09/08/94/39/700_F_908943960_8i2E96ZqXy1p01vjG9n8p3w8B9N6mXyW_ST.mp4"
+                  src="/bodyguard_operations.mp4"
                   poster={guard4}
                   autoPlay
                   loop
