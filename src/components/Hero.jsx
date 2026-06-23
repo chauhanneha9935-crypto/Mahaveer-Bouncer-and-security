@@ -125,7 +125,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* LEFT COLUMN: PRIMARY TYPOGRAPHY HEADLINES */}
-          <div className="flex flex-col space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1 lg:col-span-7">
+          <div className="flex flex-col space-y-6 sm:space-y-8 text-center lg:text-left order-1 lg:order-1 lg:col-span-7">
             <div className="self-center lg:self-start border border-amber-500/30 bg-[#161107] px-5 py-2 rounded-full font-bold tracking-widest text-xs text-amber-400 uppercase shadow-[0_0_15px_rgba(245,158,11,0.05)]">
               PAN-INDIA DEPLOYMENT • 24x7
             </div>
@@ -160,7 +160,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT COLUMN: RADAR NAVIGATION HUB WITH PROTECTION LOOP */}
-          <div className="flex items-center justify-center order-1 lg:order-2 lg:col-span-5 w-full">
+          <div className="flex items-center justify-center order-2 lg:order-2 lg:col-span-5 w-full">
             <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center select-none group">
               
               <div className="absolute w-[100%] h-[100%] border border-zinc-900 rounded-full pointer-events-none"></div>
