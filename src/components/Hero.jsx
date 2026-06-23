@@ -6,9 +6,9 @@ import guard2 from '../assets/guard2.jpg';
 import guard3 from '../assets/bodyguard3.png';
 import guard4 from '../assets/bodyguard1.avif';
 import guard5 from '../assets/bodyguard2.png';
-
-// Verbatim reference placeholder tracking file name configuration:
-// "WhatsApp Video 2026-06-19 at 12.27.04 PM_2.mp4"
+import guard6 from '../assets/tactical_bouncer_unit.png';
+import guard7 from '../assets/trained_professionals.png';
+import guard8 from '../assets/verified_staff.png';
 
 export default function Hero() {
   const [topActiveSlide, setTopActiveSlide] = useState(2); // Center initial index (guard3)
@@ -16,6 +16,49 @@ export default function Hero() {
 
   // Pipeline containing your 5 verified working assets
   const fullScreenBodyguards = [guard1, guard2, guard3, guard4, guard5];
+
+  // Pipeline containing all stream assets for the live stream slideshow
+  const streamImages = [guard1, guard2, guard3, guard4, guard5, guard6, guard7, guard8];
+
+  const [activeStreamIdx, setActiveStreamIdx] = useState(0);
+  const [timecode, setTimecode] = useState('00:00:00:00');
+  const [gpsCoords, setGpsCoords] = useState({ lat: 28.6139, lon: 77.2090 });
+
+  // Stream slide transition logic: change image every 5 seconds
+  useEffect(() => {
+    const streamTimer = setInterval(() => {
+      setActiveStreamIdx((prev) => (prev + 1) % streamImages.length);
+    }, 5000);
+    return () => clearInterval(streamTimer);
+  }, []);
+
+  // Timecode counter: increment frames and format as HH:MM:SS:FF
+  useEffect(() => {
+    let startTime = Date.now();
+    const tcTimer = setInterval(() => {
+      const elapsedMs = Date.now() - startTime;
+      const totalFrames = Math.floor(elapsedMs / 33.33); // ~30 fps
+      const f = totalFrames % 30;
+      const s = Math.floor(totalFrames / 30) % 60;
+      const m = Math.floor(totalFrames / 1800) % 60;
+      const h = Math.floor(totalFrames / 108000) % 24;
+      
+      const pad = (n) => n.toString().padStart(2, '0');
+      setTimecode(`${pad(h)}:${pad(m)}:${pad(s)}:${pad(f)}`);
+    }, 33);
+    return () => clearInterval(tcTimer);
+  }, []);
+
+  // GPS noise: fluctuate coordinates slightly
+  useEffect(() => {
+    const gpsTimer = setInterval(() => {
+      setGpsCoords((prev) => ({
+        lat: 28.6139 + (Math.random() - 0.5) * 0.0003,
+        lon: 77.2090 + (Math.random() - 0.5) * 0.0003
+      }));
+    }, 2000);
+    return () => clearInterval(gpsTimer);
+  }, []);
 
   // Engine 1: Controls the Top Portrait 3D Carousel automatic interval progression
   useEffect(() => {
@@ -169,22 +212,122 @@ export default function Hero() {
 
               {/* Core 3D Interactive Video Display Window */}
               <div 
-                className="relative w-56 h-72 sm:w-72 sm:h-[24rem] rounded-2xl bg-neutral-950 transform-gpu [transform-style:preserve-3d] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-amber-500/20 [transform:rotateX(14deg)_rotateY(-18deg)] hover:[transform:rotateX(4deg)_rotateY(-4deg)_scale(1.02)] transition-all duration-500 ease-out"
+                className="relative w-56 h-72 sm:w-72 sm:h-[24rem] rounded-2xl bg-neutral-950 transform-gpu [transform-style:preserve-3d] z-10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-amber-500/20 [transform:rotateX(14deg)_rotateY(-18deg)] hover:[transform:rotateX(4deg)_rotateY(-4deg)_scale(1.02)] transition-all duration-500 ease-out overflow-hidden"
               >
+                <style>{`
+                  @keyframes kenburns-pan-zoom {
+                    0% {
+                      transform: scale(1.02) translate(0, 0);
+                    }
+                    50% {
+                      transform: scale(1.15) translate(-1.5%, 1%);
+                    }
+                    100% {
+                      transform: scale(1.02) translate(0, 0);
+                    }
+                  }
+                  .animate-kenburns-active {
+                    animation: kenburns-pan-zoom 12s ease-in-out infinite;
+                  }
+                  @keyframes scanline-vertical {
+                    0% {
+                      transform: translateY(-100%);
+                    }
+                    100% {
+                      transform: translateY(100%);
+                    }
+                  }
+                  .animate-vertical-scanline {
+                    animation: scanline-vertical 8s linear infinite;
+                  }
+                  @keyframes tracking-frame {
+                    0% {
+                      transform: translate(-50%, -50%) translate(-6px, -4px);
+                    }
+                    30% {
+                      transform: translate(-50%, -50%) translate(8px, 6px);
+                    }
+                    60% {
+                      transform: translate(-50%, -50%) translate(-10px, 8px);
+                    }
+                    85% {
+                      transform: translate(-50%, -50%) translate(6px, -6px);
+                    }
+                    100% {
+                      transform: translate(-50%, -50%) translate(-6px, -4px);
+                    }
+                  }
+                  .animate-tracking-hud {
+                    animation: tracking-frame 14s ease-in-out infinite;
+                  }
+                `}</style>
+
                 {/* 
-                  UPDATED TACTICAL VIDEO STREAM:
-                  Replaces static screenshot frames directly with the customized close protection loop.
+                  React-only Live Stream Simulation Container
+                  Cycles through bodyguard images with Ken Burns scaling and cross-fade opacity transitions.
                 */}
-                <video
-                  ref={videoRef}
-                  src="/bodyguard_operations.mp4"
-                  poster={guard4}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-85"
-                />
+                <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden bg-neutral-950/90 select-none">
+                  {streamImages.map((imgSrc, idx) => {
+                    const isActive = idx === activeStreamIdx;
+                    return (
+                      <div
+                        key={idx}
+                        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+                          isActive ? 'opacity-80 animate-kenburns-active' : 'opacity-0 pointer-events-none'
+                        }`}
+                        style={{
+                          backgroundImage: `url('${imgSrc}')`
+                        }}
+                      />
+                    );
+                  })}
+
+                  {/* Dark Contrast Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-900/10 to-transparent opacity-80 pointer-events-none" />
+
+                  {/* Subtle Grid Pattern Overlay */}
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(10,220,10,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(10,220,10,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+
+                  {/* Scrolling Scanline Bar */}
+                  <div className="absolute left-0 right-0 h-[2px] bg-emerald-500/15 pointer-events-none top-0 animate-vertical-scanline" />
+
+                  {/* AI Face Tracker Box overlay */}
+                  <div className="absolute top-[42%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-28 h-36 border border-transparent pointer-events-none animate-tracking-hud z-20">
+                    {/* Bounding box corner ticks */}
+                    <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-emerald-400" />
+                    <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-emerald-400" />
+                    <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-emerald-400" />
+                    <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-emerald-400" />
+                    
+                    <div className="absolute -top-5 left-0 text-emerald-400 font-mono text-[8px] uppercase tracking-widest whitespace-nowrap bg-neutral-950/60 px-1 py-0.5 rounded border border-emerald-500/20 backdrop-blur-xs">
+                      TRK_LOCK: MVP-092
+                    </div>
+                    <div className="absolute -bottom-5 left-0 text-emerald-400 font-mono text-[7px] uppercase tracking-wider whitespace-nowrap bg-neutral-950/60 px-1 py-0.5 rounded border border-emerald-500/20 backdrop-blur-xs">
+                      CONFIRM: 99.8%
+                    </div>
+                  </div>
+
+                  {/* Top Status Header */}
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
+                    <div className="flex items-center space-x-2 bg-black/60 px-2 py-0.5 rounded border border-neutral-800 backdrop-blur-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse" />
+                      <span className="text-[8px] font-mono font-black text-zinc-300 tracking-wider uppercase">REC • CAM-01</span>
+                    </div>
+                    <div className="flex flex-col items-end text-right font-mono bg-black/60 px-2.5 py-0.5 rounded border border-neutral-800 backdrop-blur-sm">
+                      <span className="text-amber-500 text-[9px] font-bold tracking-wider">{timecode}</span>
+                      <span className="text-emerald-500 text-[7px] tracking-widest font-semibold uppercase">LIVE OPERATIONAL FEED</span>
+                    </div>
+                  </div>
+
+                  {/* Bottom Telemetry Footer Status */}
+                  <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-1 z-20">
+                    <div className="flex items-center justify-between font-mono text-[7px] text-zinc-400 bg-black/70 px-2 py-1 rounded border border-neutral-800/80 backdrop-blur-sm">
+                      <span className="text-emerald-400 font-bold uppercase">SIGNAL: STABLE</span>
+                      <span>ISO 400 • 60 FPS</span>
+                      <span className="text-zinc-300">GPS: {gpsCoords.lat.toFixed(5)} N, {gpsCoords.lon.toFixed(5)} E</span>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="absolute -inset-full top-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:animate-[shine_1.6s_ease-in-out]"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-900/10 to-transparent opacity-85 rounded-2xl"></div>
@@ -197,11 +340,6 @@ export default function Hero() {
                   </div>
                   <h3 className="text-base sm:text-xl font-black text-white uppercase tracking-tight">Active Deployment</h3>
                   <p className="text-zinc-400 text-[10px] sm:text-[11px] mt-0.5 font-semibold">Real-time close protection channel feed.</p>
-                </div>
-
-                <div className="absolute top-4 left-4 flex items-center space-x-2 bg-black/60 px-2.5 py-1 rounded border border-neutral-800 backdrop-blur-sm [transform:translateZ(10px)]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></div>
-                  <span className="text-[9px] font-mono font-black text-zinc-300 tracking-wider uppercase">REC • CAM-01</span>
                 </div>
 
                 <div className="absolute inset-2 rounded-xl border border-amber-500/10 pointer-events-none [transform:translateZ(15px)] transition-all duration-500 group-hover:border-amber-500/30"></div>
