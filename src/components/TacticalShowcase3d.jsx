@@ -38,7 +38,7 @@ export default function TacticalShowcase3D() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 gap-6 max-w-xl mx-auto lg:mx-0 text-left mb-24 border-b border-neutral-900 pb-12">
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-amber-500 tracking-tight">5K+</div>
+             <div className="text-3xl sm:text-4xl font-black text-amber-500 tracking-tight">5K+</div> 
             <div className="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mt-1">GUARDS</div>
           </div>
           <div className="border-l border-neutral-900 pl-6">
