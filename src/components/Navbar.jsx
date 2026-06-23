@@ -29,9 +29,9 @@ export default function Navbar() {
               alt="Mahaveer Bouncer & Security Logo" 
               className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-xl border border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 hover:scale-105 hover:border-amber-500/70 hover:shadow-[0_0_25px_rgba(245,158,11,0.55)]" 
             />
-            <div className="hidden sm:flex flex-col text-left">
-              <span className="text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none">MAHAVEER</span>
-              <span className="text-xs tracking-[0.2em] text-zinc-500 font-bold uppercase mt-2">Bouncer & Security</span>
+            <div className="flex flex-col text-left">
+              <span className="text-lg sm:text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none">MAHAVEER</span>
+              <span className="text-[9px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] text-zinc-500 font-bold uppercase mt-1 sm:mt-2">Bouncer & Security</span>
             </div>
           </Link>
 
