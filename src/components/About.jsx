@@ -7,7 +7,14 @@ import {
   MapPinned,
 } from "lucide-react";
 
-export default function Overview() {
+// Import custom generated high-quality images from assets
+import trainedProfessionalsImg from "../assets/trained_professionals.png";
+import verifiedStaffImg from "../assets/verified_staff.png";
+import support24x7Img from "../assets/support_24x7.png";
+import quickDeploymentImg from "../assets/quick_deployment.png";
+import panIndiaImg from "../assets/pan_india.png";
+
+export default function About() {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
 
   const highlights = [
@@ -15,36 +22,31 @@ export default function Overview() {
       title: "Trained Professionals",
       desc: "Elite bouncers and security operators rigorously trained in tactical defensive maneuvers, crowd control, and de-escalation protocols.",
       icon: ShieldCheck,
-      bgImg:
-        "https://images.unsplash.com/photo-1579208575657-c595a05393b7?auto=format&fit=crop&w=600&q=80",
+      bgImg: trainedProfessionalsImg,
     },
     {
       title: "Verified Staff",
       desc: "Complete peace of mind with 100% background-verified, police-cleared, and stringently vetted personnel details.",
       icon: BadgeCheck,
-      bgImg:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+      bgImg: verifiedStaffImg,
     },
     {
       title: "24×7 Support",
       desc: "Our tactical command operations center runs around the clock, providing instant assistance and continuous field monitoring.",
       icon: Headset,
-      bgImg:
-        "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80",
+      bgImg: support24x7Img,
     },
     {
       title: "Quick Deployment",
       desc: "Rapid deployment infrastructure capable of positioning defensive security details at your location on short strategic notice.",
       icon: Rocket,
-      bgImg:
-        "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=600&q=80",
+      bgImg: quickDeploymentImg,
     },
     {
       title: "PAN India Service Network",
       desc: "Extensive protection coverage spanning major commercial hubs, high-profile events, and industrial sectors across the nation.",
       icon: MapPinned,
-      bgImg:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
+      bgImg: panIndiaImg,
     },
   ];
 
@@ -94,8 +96,8 @@ export default function Overview() {
                     className={`absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105
                       ${
                         isSelected
-                          ? "opacity-40 grayscale-0 scale-105"
-                          : "opacity-25 grayscale group-hover:grayscale-0 group-hover:opacity-40"
+                          ? "opacity-75 scale-105"
+                          : "opacity-45 group-hover:opacity-70"
                       }`}
                     style={{
                       backgroundImage: `url(${item.bgImg})`,
@@ -103,7 +105,7 @@ export default function Overview() {
                   />
 
                   {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent" />
                 </div>
 
                 {/* Foreground Content */}

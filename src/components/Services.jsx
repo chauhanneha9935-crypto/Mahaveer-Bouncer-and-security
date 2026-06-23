@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
 
-// Explicitly importing only the absolutely verified files that exist locally
-import guard1 from '../assets/guard1.jpg';
-import guard2 from '../assets/guard2.jpg';
+// Import local assets for Security Guard Services
+import residentialSecurityImg from '../assets/residential_security.png';
+import apartmentSecurityImg from '../assets/apartment_security.png';
+import officeSecurityImg from '../assets/office_security.png';
+import industrialSecurityImg from '../assets/industrial_security.png';
+import warehouseSecurityImg from '../assets/warehouse_security.png';
 
-// FALLBACK CHANNELS: Swapping out local imports for stable string assets 
-// so the Vite bundler never has to parse files that might be missing locally.
-const guard3 = "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80";
-const political = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80";
+// Import local assets for Bouncer Services
+import clubLoungeBouncersImg from '../assets/club_lounge_bouncers.png';
+import hotelBouncersImg from '../assets/hotel_bouncers.png';
+import eventBouncersImg from '../assets/staff.jpeg';
+import vipEventSecurityImg from '../assets/verified_staff.png';
+
+// Import local assets for Personal Protection
+import bodyguardsImg from '../assets/bodyguard1.avif';
+import vipSecurityImg from '../assets/quick_deployment.png';
+import celebrityProtectionImg from '../assets/bodyguard2.png';
+import executiveProtectionImg from '../assets/bodyguard3.png';
+
+// Import local assets for Event Security
+import concertSecurityImg from '../assets/verified_staff.png';
+import weddingSecurityImg from '../assets/guard1.jpg';
+import politicalEventSecurityImg from '../assets/political.jpeg';
+import corporateEventSecurityImg from '../assets/trained_professionals.png';
 
 export default function Services() {
   // Modal tracking state for deep asset informational sheets
@@ -21,31 +37,31 @@ export default function Services() {
         {
           name: "Residential Security",
           desc: "Dedicated protection protocols designed for private estates, ensuring secure gate control and continuous access management.",
-          img: guard1,
+          img: residentialSecurityImg,
           specs: { threatLevel: "Low to Medium", responseTime: "< 5 Mins", loadout: "Radio Comms, Patrol Baton, Flashlight", protocols: "24/7 Perimeter Patrols, Visitor Logs, Vehicle Gate Vetting" }
         },
         {
           name: "Apartment Security",
           desc: "Multi-family residential protection setups handling visitor logging, vehicle verification, and localized foot patrols.",
-          img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80",
+          img: apartmentSecurityImg,
           specs: { threatLevel: "Low", responseTime: "< 7 Mins", loadout: "CCTV Matrix Monitor, Logging Terminal", protocols: "Roving Patrols, Parking Registry, Resident Escalation Support" }
         },
         {
           name: "Office Security",
           desc: "Corporate reception guarding, badge management access matrices, and intellectual asset tracking systems.",
-          img: guard2,
+          img: officeSecurityImg,
           specs: { threatLevel: "Medium", responseTime: "< 3 Mins", loadout: "Access Badge Scanner, Panic Line Matrix", protocols: "Front Desk Screening, Tailgating Prevention, Courier Isolation Vetting" }
         },
         {
           name: "Industrial Security",
           desc: "Heavy factory deployment focused on gate inventory safety, machinery protection, and emergency hazard response.",
-          img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80",
+          img: industrialSecurityImg,
           specs: { threatLevel: "High Risk Asset", responseTime: "< 4 Mins", loadout: "High-Vis Tactical, Fire Suppress Tools", protocols: "Material Outward/Inward Audit, HSE Compliance Enforcement, Emergency Muster Guarding" }
         },
         {
           name: "Warehouse Security",
           desc: "Logistics asset monitoring, loading dock double-verification checkpoints, and 24/7 internal theft prevention.",
-          img: guard3,
+          img: warehouseSecurityImg,
           specs: { threatLevel: "Medium Risk Asset", responseTime: "< 6 Mins", loadout: "RFID Hand Scanner, Cargo Seals Audit Kit", protocols: "Seal Audit Checks, Loading Bay Surveillance, Anti-Pilferage Perimeter Scans" }
         }
       ]
@@ -57,25 +73,25 @@ export default function Services() {
         {
           name: "Club & Lounge Bouncers",
           desc: "Elite hospitality crowd filtering, age verification checks, and rapid internal de-escalation solutions.",
-          img: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=500&q=80",
+          img: clubLoungeBouncersImg,
           specs: { threatLevel: "High Volatility", responseTime: "Instantaneous", loadout: "Earpiece Comms, Concealed Protective Vest", protocols: "ID Authentication Vetting, Hostile Eviction, Dynamic Crowd Density Control" }
         },
         {
           name: "Hotel Bouncers",
           desc: "Polished protection presence maintained across luxury lobbies, parking bays, and VIP guest entry zones.",
-          img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80",
+          img: hotelBouncersImg,
           specs: { threatLevel: "Low to Medium", responseTime: "< 2 Mins", loadout: "Premium Concealed Suit Kit, Radio Set", protocols: "Discreet VIP Escorts, Front Drive Cleared Lanes, Guest Asset Safeguarding" }
         },
         {
           name: "Event Bouncers",
           desc: "Physical perimeter support details keeping large corporate gatherings or private parties fully locked down.",
-          img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=500&q=80",
+          img: eventBouncersImg,
           specs: { threatLevel: "Medium Volatility", responseTime: "< 1 Min", loadout: "Event-Spec High-Vis, Metal Wand Scanner", protocols: "Perimeter Integrity Checks, Stage Containment, Ticket Fraud Suppression" }
         },
         {
           name: "VIP Event Security",
           desc: "High-tier protective parameters built around exclusive private guest lists and multi-agency routing check lines.",
-          img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80",
+          img: vipEventSecurityImg,
           specs: { threatLevel: "Extreme Profile", responseTime: "Instantaneous", loadout: "Full Tact Suit, Intercom Link, Wand Scanner", protocols: "Black-List Cross Referencing, Media Stand-Off Lines, Anti-Espionage Room Sweeps" }
         }
       ]
@@ -87,25 +103,25 @@ export default function Services() {
         {
           name: "Bodyguards",
           desc: "Dedicated personal defense escorts handling physical threat detection, close shield routing, and direct line transit safety.",
-          img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80",
+          img: bodyguardsImg,
           specs: { threatLevel: "High Threat Matrix", responseTime: "Instantaneous", loadout: "Concealed Armored Shield Vest, Sat Comms", protocols: "Transit Counter-Surveillance, Pre-Route Reconnaissance, High-Shield Evacuation Maps" }
         },
         {
           name: "VIP Security",
           desc: "Comprehensive protection assets tailored to handle high-profile executive travel logistics and residential sweeps.",
-          img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80",
+          img: vipSecurityImg,
           specs: { threatLevel: "Medium to High", responseTime: "< 1 Min", loadout: "Encrypted Communication Array, First-Aid Kit", protocols: "Tactical Advance Planning, Guest Screening, Secure Corridor Management" }
         },
         {
           name: "Celebrity Protection",
           desc: "Media management boundaries, aggressive crowd stand-off barriers, and dynamic back-door exit routing strategies.",
-          img: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=500&q=80",
+          img: celebrityProtectionImg,
           specs: { threatLevel: "High Volatility", responseTime: "Instantaneous", loadout: "Crowd Control Kit, Disruption Deflectors", protocols: "Perimeter Buffer Zones, Anti-Paparazzi Shields, Crisis Extraction Strategies" }
         },
         {
           name: "Executive Protection",
           desc: "Discreet corporate protection engineered for multinational directors, corporate board teams, and sensitive trade journeys.",
-          img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80",
+          img: executiveProtectionImg,
           specs: { threatLevel: "Corporate Espionage Target", responseTime: "< 2 Mins", loadout: "Low-Profile Armor Outfitting, Intercom Subsystems", protocols: "Sweeping Meeting Rooms, Corporate Itinerary Threat Vetting, Safe-Haven Route Plans" }
         }
       ]
@@ -117,25 +133,25 @@ export default function Services() {
         {
           name: "Concert Security",
           desc: "Massive stage-front barricade management teams, emergency crowd exit control maps, and stadium ticket-gate screening.",
-          img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500&q=80",
+          img: concertSecurityImg,
           specs: { threatLevel: "Crowd Surge Risk", responseTime: "< 1 Min", loadout: "High-Output Comms, Barrier Interlocks", protocols: "Pit Management, Turnstile Inspection Matrices, Emergency Muster Direction" }
         },
         {
           name: "Wedding Security",
           desc: "Polished, welcoming security staff deployed to eliminate gate crashers, monitor gift vaults, and manage guest traffic.",
-          img: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80",
+          img: weddingSecurityImg,
           specs: { threatLevel: "Low Risk", responseTime: "< 3 Mins", loadout: "Formal Attire Dress-Code Kit, Discreet Comms", protocols: "Guest-List Verification Checks, Gift Vault Guarding, Valet Parking Overwatches" }
         },
         {
           name: "Political Event Security",
           desc: "High-alert multi-tier stage perimeters, active line sweeps, and coordinated local logistics asset integrations.",
-          img: political,
+          img: politicalEventSecurityImg,
           specs: { threatLevel: "Extreme Profile", responseTime: "Instantaneous", loadout: "Full Spectrum Counter-Tactical Outfitting", protocols: "Multi-Agency Coordination, Stage-Zone Sterilization, Crowd Line Screening Checks" }
         },
         {
           name: "Corporate Event Security",
           desc: "Secure media non-disclosure monitoring, shareholder assembly room lockdowns, and executive hospitality coverage.",
-          img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=500&q=80",
+          img: corporateEventSecurityImg,
           specs: { threatLevel: "Medium Profile", responseTime: "< 2 Mins", loadout: "NDI Verification Hardware, Access Control Badge Hubs", protocols: "Media Exclusion Vetting, Executive Suite Lockdown Matrices, Guest Credentials Audits" }
         }
       ]
@@ -155,13 +171,13 @@ export default function Services() {
 
       {/* Background Matrix Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40 pointer-events-none"></div>
-      
+
       {/* Subtle Radial Lighting Highlights */}
       <div className="absolute top-20 left-[-10%] w-[35rem] h-[35rem] bg-amber-500/5 rounded-full blur-[140px] pointer-events-none"></div>
       <div className="absolute bottom-40 right-[-10%] w-[40rem] h-[40rem] bg-amber-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Sector Index Header */}
         <div className="text-center mb-20">
           <span className="text-amber-500 text-xs font-black tracking-widest uppercase bg-amber-500/10 px-4 py-1.5 rounded border border-amber-500/20 shadow-sm">
@@ -177,7 +193,7 @@ export default function Services() {
         <div className="space-y-32">
           {sections.map((sec, secIdx) => (
             <div key={secIdx} className="relative">
-              
+
               {/* Category Sidebar Header */}
               <div className="border-b border-neutral-800 pb-4 mb-14 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight flex items-center">
@@ -190,13 +206,13 @@ export default function Services() {
               </div>
 
               {/* FIXED: Swapped grid-cols-1 on phone for grid-cols-2 to force dual-column layouts in mobile viewports */}
-              <div 
+              <div
                 className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-10 items-stretch"
                 style={{ perspective: '1200px' }}
               >
                 {sec.subItems.map((item, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     onClick={() => setSelectedAsset({ ...item, code: `UNIT 0${secIdx + 1}-0${index + 1}` })}
                     className="
                       group relative rounded-2xl cursor-pointer select-none h-full flex flex-col
@@ -210,15 +226,15 @@ export default function Services() {
 
                     {/* Card Container Face */}
                     <div className="h-full bg-neutral-900 border border-neutral-800/90 rounded-2xl overflow-hidden flex flex-col justify-between [transform:translateZ(0px)] group-hover:border-amber-500/40 transition-colors duration-300 pb-4 sm:pb-6">
-                      
+
                       {/* Image Mask Viewport */}
                       <div className="relative h-28 sm:h-48 w-full overflow-hidden bg-black border-b border-neutral-800/80 [transform-style:preserve-3d]">
-                        <div 
+                        <div
                           className="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-105 [transform:translateZ(-6px)]"
                           style={{ backgroundImage: `url('${item.img}')` }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent opacity-60"></div>
-                        
+
                         <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-neutral-950 text-amber-500 font-mono font-bold border border-neutral-800 text-[8px] sm:text-[10px] tracking-wider px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded shadow-lg [transform:translateZ(18px)]">
                           U-0{secIdx + 1}-0{index + 1}
                         </div>
@@ -271,15 +287,15 @@ export default function Services() {
       {selectedAsset && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4 transition-opacity duration-300">
           <div className="absolute inset-0" onClick={() => setSelectedAsset(null)}></div>
-          
+
           <div className="relative w-full max-w-lg bg-[#0d0d0d] border border-zinc-800 rounded-3xl p-6 md:p-8 shadow-[0_25px_70px_-10px_rgba(0,0,0,0.9)] animate-modal-zoom text-left z-10 max-h-[90vh] overflow-y-auto">
-            
+
             <div className="flex justify-between items-start border-b border-zinc-800 pb-4 mb-6">
               <div>
                 <span className="text-amber-500 font-mono text-[10px] font-black tracking-widest block">// SECURITY CONFIG: {selectedAsset.code}</span>
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight mt-1">{selectedAsset.name}</h3>
               </div>
-              <button 
+              <button
                 onClick={() => setSelectedAsset(null)}
                 className="w-8 h-8 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 flex items-center justify-center hover:text-white hover:border-amber-500/50 transition-colors cursor-pointer outline-none border-none"
               >
@@ -332,7 +348,7 @@ export default function Services() {
               >
                 Close View
               </button>
-              <a 
+              <a
                 href="/inquiry"
                 className="w-full sm:w-auto h-12 px-8 bg-amber-500 text-black flex items-center justify-center rounded-xl font-black text-xs uppercase tracking-widest hover:bg-amber-600 transition-all shadow-lg shadow-amber-500/10 text-center"
               >
