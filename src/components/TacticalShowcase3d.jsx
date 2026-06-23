@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import guard1 from '../assets/guard1.jpg';
+import tacticalBouncerUnitImg from '../assets/tactical_bouncer_unit.png';
+import closeProtectionOfficerImg from '../assets/bodyguard1.avif';
 
 export default function TacticalShowcase3D() {
   const [activeCard, setActiveCard] = useState(null);
@@ -18,7 +20,7 @@ export default function TacticalShowcase3D() {
       title: 'Tactical Bouncer Units',
       tag: 'Crowd & Event Elite',
       desc: 'Elite protection professionals specialized in high-capacity event security, de-escalation protocols, and risk mitigation.',
-      img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80',
+      img: tacticalBouncerUnitImg,
       accent: 'border-amber-500/40 shadow-amber-500/10'
     },
     {
@@ -26,7 +28,7 @@ export default function TacticalShowcase3D() {
       title: 'Close Protection Officers',
       tag: 'VIP Bodyguards',
       desc: 'Discreet, background-verified personal security details custom-tailored for celebrity protection and executive deployment.',
-      img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
+      img: closeProtectionOfficerImg,
       accent: 'border-amber-500/40 shadow-amber-500/10'
     }
   ];
@@ -84,7 +86,7 @@ export default function TacticalShowcase3D() {
               <div className="absolute inset-0 bg-neutral-950 rounded-2xl border border-neutral-800 [transform:translateZ(-18px)]"></div>
 
               <div className={`absolute inset-0 rounded-2xl bg-cover bg-center border-2 ${unit.accent} overflow-hidden`}>
-                <div className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-all" style={{ backgroundImage: `url('${unit.img}')` }} />
+                <div className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-100 transition-all" style={{ backgroundImage: `url('${unit.img}')` }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent opacity-95"></div>
                 <div className="absolute -inset-full top-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:animate-shine"></div>
 

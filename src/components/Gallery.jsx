@@ -1,33 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
+// Import local Indian-themed assets for the Gallery
+import officeSecurityImg from '../assets/office_security.png';
+import industrialSecurityImg from '../assets/industrial_security.png';
+import clubLoungeBouncersImg from '../assets/club_lounge_bouncers.png';
+import bodyguard1Img from '../assets/bodyguard1.avif';
+import bodyguard2Img from '../assets/bodyguard2.png';
+import quickDeploymentImg from '../assets/quick_deployment.png';
+import support24x7Img from '../assets/support_24x7.png';
+import trainedProfessionalsImg from '../assets/trained_professionals.png';
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
-  const [carouselIndex, setCarouselIndex] = useState(0);
-
-  // Expanded asset pipeline featuring Indian bodyguard and elite tactical operations imagery
-  const automaticSliderImages = [
-    {
-      img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80',
-      title: 'VIP Escort Formations',
-      tag: 'Close Protection'
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
-      title: 'Strategic Reconnaissance',
-      tag: 'Tactical Route Sweep'
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
-      title: 'Corporate Command Matrix',
-      tag: 'Perimeter Hardening'
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
-      title: 'Venue Perimeter Hardening',
-      tag: 'Crowd Control Operations'
-    }
-  ];
 
   const filters = [
     { label: 'All Operations', value: 'all' },
@@ -42,7 +27,7 @@ export default function Gallery() {
       category: 'cp',
       title: 'VIP Escort Transit Protocol',
       desc: 'Elite personal protection details establishing a high-shield perimeter during VIP transit sweeps.',
-      img: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80',
+      img: bodyguard2Img,
       size: 'md:col-span-2 md:row-span-2'
     },
     {
@@ -50,7 +35,7 @@ export default function Gallery() {
       category: 'sec',
       title: 'Asset Hardening',
       desc: 'Uniformed security officers executing access matrix logs and perimeter fence line audits.',
-      img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+      img: officeSecurityImg,
       size: 'md:col-span-1 md:row-span-1'
     },
     {
@@ -58,7 +43,7 @@ export default function Gallery() {
       category: 'cc',
       title: 'Mass Arena Control',
       desc: 'Tactical event bouncers managing main stage barricades and high-capacity entry lines.',
-      img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+      img: clubLoungeBouncersImg,
       size: 'md:col-span-1 md:row-span-2'
     },
     {
@@ -66,7 +51,7 @@ export default function Gallery() {
       category: 'cp',
       title: 'Tactical Advance Recon',
       desc: 'Close Protection Officers mapping safe corridors and exit strategies prior to asset arrival.',
-      img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+      img: quickDeploymentImg,
       size: 'md:col-span-1 md:row-span-1'
     },
     {
@@ -74,7 +59,7 @@ export default function Gallery() {
       category: 'sec',
       title: '24/7 Command Center',
       desc: 'Real-time internal logistics feeding live surveillance feeds to field units.',
-      img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
+      img: support24x7Img,
       size: 'md:col-span-2 md:row-span-1'
     },
     {
@@ -82,7 +67,7 @@ export default function Gallery() {
       category: 'cc',
       title: 'Event Lockdown Matrix',
       desc: 'Pre-vetted event staff implementing deep guest-list logging checkpoints.',
-      img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      img: trainedProfessionalsImg,
       size: 'md:col-span-1 md:row-span-1'
     },
     {
@@ -90,7 +75,7 @@ export default function Gallery() {
       category: 'cp',
       title: 'Urban Convoy Escort',
       desc: 'Multi-vehicle coordinated routing designed to mitigate high-density metropolitan threat sectors.',
-      img: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
+      img: bodyguard1Img,
       size: 'md:col-span-1 md:row-span-1'
     },
     {
@@ -98,19 +83,10 @@ export default function Gallery() {
       category: 'sec',
       title: 'Facility Countermeasure',
       desc: 'Heavy industrial manufacturing layout monitoring, checking physical asset locks and access routes.',
-      img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+      img: industrialSecurityImg,
       size: 'md:col-span-2 md:row-span-1'
     }
   ];
-
-  // Automatic slide interval trigger engine
-  useEffect(() => {
-    const autoSlider = setInterval(() => {
-      setCarouselIndex((prevIndex) => (prevIndex + 1) % automaticSliderImages.length);
-    }, 3500);
-
-    return () => clearInterval(autoSlider);
-  }, [automaticSliderImages.length]);
 
   const filteredItems = activeFilter === 'all' 
     ? galleryItems 
@@ -142,45 +118,6 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* AUTOMATIC HIGH-IMPACT HERO CAROUSEL */}
-        <div className="w-full h-[260px] sm:h-[400px] rounded-3xl overflow-hidden relative border border-zinc-900 shadow-2xl mb-16 group">
-          {automaticSliderImages.map((slide, slideIdx) => (
-            <div
-              key={slideIdx}
-              className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out block
-                ${slideIdx === carouselIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'}
-              `}
-            >
-              <div 
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${slide.img}')` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-              
-              <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 text-left max-w-md select-none">
-                <span className="text-[8px] sm:text-[10px] font-mono font-black text-amber-500 tracking-widest uppercase bg-black/60 px-2 py-1 sm:px-3 sm:py-1.5 rounded border border-zinc-800">
-                  // LIVE STREAM: {slide.tag}
-                </span>
-                <h3 className="text-xl md:text-4xl font-black text-white uppercase tracking-tight mt-2 sm:mt-3">
-                  {slide.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-
-          <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 flex items-center space-x-2 z-20">
-            {automaticSliderImages.map((_, dotIdx) => (
-              <button
-                key={dotIdx}
-                onClick={() => setCarouselIndex(dotIdx)}
-                className={`h-1.5 rounded-full transition-all duration-300 outline-none cursor-pointer border-none
-                  ${dotIdx === carouselIndex ? 'w-6 sm:w-8 bg-amber-500' : 'w-1.5 sm:w-2 bg-zinc-700 hover:bg-zinc-500'}
-                `}
-              />
-            ))}
-          </div>
-        </div>
-
         {/* FILTER SELECTION MATRIX BAR */}
         <div className="flex flex-wrap items-center gap-2 bg-neutral-900/40 p-1.5 rounded-2xl border border-zinc-800/60 backdrop-blur-sm mb-10 w-max max-w-full">
           {filters.map((filter) => (
@@ -209,7 +146,7 @@ export default function Gallery() {
             >
               <div className="absolute inset-0 block overflow-hidden z-0">
                 <div
-                  className="absolute inset-0 bg-cover bg-center filter grayscale opacity-60 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-95"
+                  className="absolute inset-0 bg-cover bg-center opacity-70 transition-all duration-700 group-hover:scale-105 group-hover:opacity-95"
                   style={{ backgroundImage: `url('${item.img}')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-black/10 group-hover:via-transparent transition-all duration-500"></div>
