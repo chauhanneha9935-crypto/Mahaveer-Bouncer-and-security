@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import guard1 from '../assets/guard1.jpg';
-import tacticalBouncerUnitImg from '../assets/tactical_bouncer_unit.png';
-import closeProtectionOfficerImg from '../assets/bodyguard1.avif';
 
 export default function TacticalShowcase3D() {
   const [activeCard, setActiveCard] = useState(null);
@@ -12,7 +9,7 @@ export default function TacticalShowcase3D() {
       title: 'Armed Security Guards',
       tag: 'Industrial & Office',
       desc: 'Certified personnel engineered for infrastructure hardening, quick deployment, and round-the-clock facility monitoring.',
-      img: guard1,
+      img: 'https://ik.imagekit.io/tqlzfrmoqb/guard1.jpg',
       accent: 'border-amber-500/40 shadow-amber-500/10'
     },
     {
@@ -20,7 +17,7 @@ export default function TacticalShowcase3D() {
       title: 'Tactical Bouncer Units',
       tag: 'Crowd & Event Elite',
       desc: 'Elite protection professionals specialized in high-capacity event security, de-escalation protocols, and risk mitigation.',
-      img: tacticalBouncerUnitImg,
+      img: 'https://ik.imagekit.io/tqlzfrmoqb/tactical_bouncer_unit.png',
       accent: 'border-amber-500/40 shadow-amber-500/10'
     },
     {
@@ -28,7 +25,7 @@ export default function TacticalShowcase3D() {
       title: 'Close Protection Officers',
       tag: 'VIP Bodyguards',
       desc: 'Discreet, background-verified personal security details custom-tailored for celebrity protection and executive deployment.',
-      img: closeProtectionOfficerImg,
+      img: 'https://ik.imagekit.io/tqlzfrmoqb/bodyguard1.avif',
       accent: 'border-amber-500/40 shadow-amber-500/10'
     }
   ];

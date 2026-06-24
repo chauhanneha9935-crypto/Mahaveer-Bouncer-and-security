@@ -7,13 +7,6 @@ import {
   MapPinned,
 } from "lucide-react";
 
-// Import custom generated high-quality images from assets
-import trainedProfessionalsImg from "../assets/trained_professionals.png";
-import verifiedStaffImg from "../assets/verified_staff.png";
-import support24x7Img from "../assets/support_24x7.png";
-import quickDeploymentImg from "../assets/quick_deployment.png";
-import panIndiaImg from "../assets/pan_india.png";
-
 export default function About() {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
 
@@ -22,31 +15,31 @@ export default function About() {
       title: "Trained Professionals",
       desc: "Elite bouncers and security operators rigorously trained in tactical defensive maneuvers, crowd control, and de-escalation protocols.",
       icon: ShieldCheck,
-      bgImg: trainedProfessionalsImg,
+      bgImg: "https://ik.imagekit.io/tqlzfrmoqb/trained_professionals.png",
     },
     {
       title: "Verified Staff",
       desc: "Complete peace of mind with 100% background-verified, police-cleared, and stringently vetted personnel details.",
       icon: BadgeCheck,
-      bgImg: verifiedStaffImg,
+      bgImg: "https://ik.imagekit.io/tqlzfrmoqb/verified_staff.png",
     },
     {
       title: "24×7 Support",
       desc: "Our tactical command operations center runs around the clock, providing instant assistance and continuous field monitoring.",
       icon: Headset,
-      bgImg: support24x7Img,
+      bgImg: "https://ik.imagekit.io/tqlzfrmoqb/support_24x7.png",
     },
     {
       title: "Quick Deployment",
       desc: "Rapid deployment infrastructure capable of positioning defensive security details at your location on short strategic notice.",
       icon: Rocket,
-      bgImg: quickDeploymentImg,
+      bgImg: "https://ik.imagekit.io/tqlzfrmoqb/quick_deployment.png",
     },
     {
       title: "PAN India Service Network",
       desc: "Extensive protection coverage spanning major commercial hubs, high-profile events, and industrial sectors across the nation.",
       icon: MapPinned,
-      bgImg: panIndiaImg,
+      bgImg: "https://ik.imagekit.io/tqlzfrmoqb/pan_india.png",
     },
   ];
 
@@ -56,7 +49,6 @@ export default function About() {
       style={{ perspective: "1200px" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Block */}
         <div className="text-left mb-16">
           <span className="text-amber-500 text-xs font-black tracking-widest uppercase bg-amber-500/10 px-4 py-1.5 rounded border border-amber-500/20 shadow-sm">
             Corporate Profile
@@ -73,7 +65,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Responsive 3D Tactical Grid Framework */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transform-gpu [transform:rotateX(2deg)]">
           {highlights.map((item, index) => {
             const isSelected = activeCardIndex === index;
@@ -90,7 +81,6 @@ export default function About() {
                       : "border-zinc-900 hover:border-amber-500/30"
                   }`}
               >
-                {/* Background Image */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
                   <div
                     className={`absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105
@@ -103,14 +93,10 @@ export default function About() {
                       backgroundImage: `url(${item.bgImg})`,
                     }}
                   />
-
-                  {/* Dark Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent" />
                 </div>
 
-                {/* Foreground Content */}
                 <div className="relative z-20 text-left w-full">
-                  {/* Icon Badge */}
                   <div
                     className={`w-14 h-14 bg-zinc-950 border flex items-center justify-center rounded-xl mb-5 shadow-lg shadow-black/80 transition-all duration-300
                       ${
@@ -122,18 +108,15 @@ export default function About() {
                     <Icon size={28} strokeWidth={2.2} />
                   </div>
 
-                  {/* Title */}
                   <h3 className="text-xl font-black text-amber-500 tracking-tight uppercase mb-2">
                     {item.title}
                   </h3>
 
-                  {/* Description */}
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-semibold">
                     {item.desc}
                   </p>
                 </div>
 
-                {/* Corner Accents */}
                 <div
                   className={`absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 rounded-tr-3xl transition-all duration-300
                     ${

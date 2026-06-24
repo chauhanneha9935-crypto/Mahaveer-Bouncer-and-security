@@ -1,15 +1,5 @@
 import { useState } from 'react';
 
-// Explicitly importing your verified files from your src/assets directory
-import quickDeployment from '../assets/quick_deployment.png';
-import support24x7 from '../assets/support_24x7.png';
-import trainedProfessionals from '../assets/trained_professionals.png';
-import verifiedStaff from '../assets/verified_staff.png';
-import tacticalBouncer from '../assets/tactical_bouncer_unit.png';
-import officeSecurity from '../assets/office_security.png';
-import industrialSecurity from '../assets/industrial_security.png';
-import residentialSecurity from '../assets/residential_security.png';
-
 export default function WhyChooseUs() {
   // Tracking state to hold information when an advantage card is actively selected
   const [activeAdvantage, setActiveAdvantage] = useState(null);
@@ -18,7 +8,7 @@ export default function WhyChooseUs() {
     { 
       title: "Background Verified Personnel", 
       desc: "Trained, uniformed and police-verified guards for static posts...",
-      img: verifiedStaff,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/verified_staff.png",
       code: "AUTH-NOD-01",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -38,7 +28,7 @@ export default function WhyChooseUs() {
     { 
       title: "Professionally Trained Staff", 
       desc: "Elite physical conflict de-escalation and advanced countermeasure metrics.",
-      img: trainedProfessionals,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/trained_professionals.png",
       code: "TRN-TACT-02",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -58,7 +48,7 @@ export default function WhyChooseUs() {
     { 
       title: "Quick Staff Deployment", 
       desc: "Instant standby networks engineered for immediate protective reinforcement.",
-      img: quickDeployment,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/quick_deployment.png",
       code: "DEP-FAST-03",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -78,7 +68,7 @@ export default function WhyChooseUs() {
     { 
       title: "24/7 Monitoring Support", 
       desc: "Continuous secure operations link lines feeding real-time situational logs.",
-      img: support24x7,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/support_24x7.png",
       code: "MON-LIVE-04",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -98,7 +88,7 @@ export default function WhyChooseUs() {
     { 
       title: "Uniformed Security Officers", 
       desc: "Polished, elite high-visibility protective uniforms to assert complete deterrence.",
-      img: tacticalBouncer,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/tactical_bouncer_unit.png",
       code: "UNI-FORM-05",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -118,7 +108,7 @@ export default function WhyChooseUs() {
     { 
       title: "Experienced Management", 
       desc: "Strategic operations directed by field veterans and corporate tactical specialists.",
-      img: officeSecurity,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/office_security.png",
       code: "MNG-EXEC-06",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -138,7 +128,7 @@ export default function WhyChooseUs() {
     { 
       title: "Affordable Pricing", 
       desc: "Transparent blueprints without dynamic surcharges or hidden modifications.",
-      img: industrialSecurity,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/industrial_security.png",
       code: "VAL-COST-07",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -158,7 +148,7 @@ export default function WhyChooseUs() {
     { 
       title: "Reliable & Trustworthy", 
       desc: "Maintaining strict structural accountability rules across all domestic teams.",
-      img: residentialSecurity,
+      img: "https://ik.imagekit.io/tqlzfrmoqb/residential_security.png",
       code: "TRST-SYS-08",
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -179,7 +169,6 @@ export default function WhyChooseUs() {
 
   return (
     <section id="why-choose-us" className="py-24 bg-[#050505] text-neutral-100 relative overflow-hidden">
-      {/* Centered Modal Zoom/Fade Entry Transition Animation */}
       <style>{`
         @keyframes modal-center-zoom {
           0% { transform: scale(0.92); opacity: 0; }
@@ -189,8 +178,6 @@ export default function WhyChooseUs() {
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* SECTION HEADER MATRICES */}
         <div className="text-left mb-16">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">
             Why <span className="text-amber-500">Choose Us</span>
@@ -200,7 +187,6 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        {/* MULTI-COLUMN DESIGN GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {advantages.map((adv, idx) => (
             <div 
@@ -208,33 +194,24 @@ export default function WhyChooseUs() {
               onClick={() => setActiveAdvantage(adv)}
               className="group relative rounded-3xl overflow-hidden border border-zinc-900 bg-[#0d0d0d] flex flex-col justify-end h-[400px] transition-all duration-300 hover:border-amber-500/30 shadow-2xl cursor-pointer"
             >
-              {/* Clean Image Canvas Face */}
               <div className="absolute inset-0 z-0 block overflow-hidden">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-75 group-hover:opacity-95 group-hover:scale-105"
                   style={{ backgroundImage: `url('${adv.img}')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent"></div>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
               </div>
 
-              {/* Foreground Card Elements */}
               <div className="relative z-20 text-left w-full p-6 select-none">
-                
-                {/* Brand Badges */}
                 <div className="w-10 h-10 rounded-xl bg-amber-500 text-black flex items-center justify-center mb-4 font-bold shadow-lg shadow-amber-500/20">
                   {adv.icon}
                 </div>
-
                 <h3 className="text-xl font-black tracking-tight text-white uppercase mb-2 group-hover:text-amber-500 transition-colors">
                   {adv.title}
                 </h3>
-                
                 <p className="text-xs sm:text-sm text-zinc-400 font-semibold leading-relaxed mb-4 line-clamp-2">
                   {adv.desc}
                 </p>
-
-                {/* Trigger Prompt Component */}
                 <button 
                   type="button"
                   className="inline-flex text-amber-500 font-black tracking-wider text-xs uppercase items-center group-hover:text-amber-400 transition-colors bg-transparent border-none outline-none cursor-pointer"
@@ -242,25 +219,15 @@ export default function WhyChooseUs() {
                   Learn more <span className="ml-1.5 transition-transform group-hover:translate-x-1.5">→</span>
                 </button>
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
 
-      {/* ====================================================
-          FIXED: CENTERED TACTICAL READOUT COMMAND OVERLAY MODAL
-         ==================================================== */}
       {activeAdvantage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4 transition-opacity duration-300">
-          {/* Backdrop Click Dismiss Wrapper */}
           <div className="absolute inset-0" onClick={() => setActiveAdvantage(null)}></div>
-          
-          {/* Center-Aligned Modal Window Face */}
           <div className="relative w-full max-w-lg bg-[#0d0d0d] border border-zinc-800 rounded-3xl p-6 md:p-8 shadow-[0_25px_70px_-10px_rgba(0,0,0,0.9)] animate-modal-zoom text-left z-10 max-h-[90vh] overflow-y-auto">
-            
-            {/* Header Area Context */}
             <div className="flex justify-between items-start border-b border-zinc-800 pb-4 mb-6">
               <div>
                 <span className="text-amber-500 font-mono text-[10px] font-black tracking-widest block">// PROFILE ID: {activeAdvantage.code}</span>
@@ -274,17 +241,11 @@ export default function WhyChooseUs() {
               </button>
             </div>
 
-            {/* Modal Image Banner */}
             <div className="w-full h-48 sm:h-56 rounded-2xl overflow-hidden mb-6 relative border border-zinc-800/80">
-              <img 
-                src={activeAdvantage.img} 
-                alt={activeAdvantage.title} 
-                className="w-full h-full object-cover object-center"
-              />
+              <img src={activeAdvantage.img} alt={activeAdvantage.title} className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             </div>
 
-            {/* Specification Parameters */}
             <div className="space-y-6">
               <div>
                 <h4 className="text-[10px] font-mono uppercase font-black tracking-widest text-zinc-500">Operational Breakdown</h4>
@@ -292,10 +253,7 @@ export default function WhyChooseUs() {
                   {activeAdvantage.extendedInfo ? activeAdvantage.extendedInfo.detailedDesc : activeAdvantage.desc}
                 </p>
               </div>
-
               <div className="h-px bg-zinc-900"></div>
-
-              {/* Performance Metrics Blocks */}
               {activeAdvantage.extendedInfo && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {activeAdvantage.extendedInfo.metrics.map((metric, mi) => (
@@ -306,8 +264,6 @@ export default function WhyChooseUs() {
                   ))}
                 </div>
               )}
-
-              {/* Audit Checklists Layout */}
               {activeAdvantage.extendedInfo && (
                 <div>
                   <h4 className="text-[10px] font-mono uppercase font-black tracking-widest text-zinc-500">System Verification Audit Guidelines</h4>
@@ -322,7 +278,6 @@ export default function WhyChooseUs() {
               )}
             </div>
 
-            {/* Direct Booking Navigation Link Foot */}
             <div className="pt-6 mt-6 border-t border-zinc-900 flex flex-col sm:flex-row justify-end items-center gap-3">
               <button
                 onClick={() => setActiveAdvantage(null)}
@@ -337,7 +292,6 @@ export default function WhyChooseUs() {
                 Initiate Secure Deployment →
               </a>
             </div>
-
           </div>
         </div>
       )}
