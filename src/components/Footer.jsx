@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    /* FIXED: Configured a sharp bold white top border to separate the footer panel cleanly */
     <footer className="bg-neutral-950 text-white border-t-2 border-white pt-16 pb-8 mt-auto relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none"></div>
       
-      {/* Internal Grid Divider Layer: Changed to a deep, dark crisp neutral outline */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-neutral-800/80">
         <div>
           <Link to="/" className="flex items-center gap-3 mb-4 group inline-flex">
@@ -30,12 +28,14 @@ export default function Footer() {
             <p className="flex items-center"><span className="text-amber-500 font-bold mr-2">✉️</span> info@mahaveersecurity.com</p>
           </div>
         </div>
+        
         <div>
           <h4 className="text-base font-bold uppercase tracking-wider text-slate-200 mb-4">Our Location</h4>
           <div className="w-full h-40 bg-neutral-900/40 rounded-lg border border-neutral-800 flex items-center justify-center text-slate-500 text-sm overflow-hidden backdrop-blur-sm">
             <span className="p-4 text-center font-bold text-xs uppercase tracking-widest text-amber-500/60">Google Map Integration Area</span>
           </div>
         </div>
+
         <div>
           <h4 className="text-base font-bold uppercase tracking-wider text-slate-200 mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-slate-400 font-semibold text-left">
@@ -46,10 +46,22 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4 font-semibold">
         <p>&copy; {new Date().getFullYear()} Mahaveer Bouncer & Security Services. All rights reserved.</p>
-        <p className="tracking-wide">Designed by CodeWebX Technologies</p>
+        <p className="tracking-wide">
+          Designed by{' '}
+          <a 
+            href="https://codewebx.in/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-amber-500 hover:text-white transition-colors underline underline-offset-4"
+          >
+            CodeWebx
+          </a>
+        </p>
       </div>
+
       <a 
         href="https://wa.me/919876543210?text=Hi,%20I'm%20looking%20for%20security%20personnel." 
         target="_blank" 

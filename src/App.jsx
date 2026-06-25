@@ -8,11 +8,11 @@ import ScrollToTopWrapper from './components/ScrollToTopWrapper';
 
 // Separated Standalone Page Views (All safely referencing the components folder)
 import HomePage from './pages/HomePage'; 
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import BookingForm from './components/BookingForm';
-import ContactUs from './components/ContactUs';
-import Gallery from './components/Gallery'; // Added Gallery component for the new route
+import Services from './pages/Services';
+import WhyChooseUs from './pages/WhyChooseUs';
+import BookingForm from './pages/Inquiry';
+import ContactUs from './pages/ContactUs';
+import Gallery from './pages/Gallery'; // Added Gallery component for the new route
 
 export default function App() {
   return (

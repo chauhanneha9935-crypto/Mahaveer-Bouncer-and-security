@@ -18,20 +18,24 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* LOGO AND BRANDING SECTION */}
+          {/* BOLD LOGO AND BRANDING SECTION LINKED TO HOME PAGE */}
           <Link 
             to="/" 
             onClick={() => setIsOpen(false)} 
-            className="flex-shrink-0 flex items-center gap-4" 
+            className="flex-shrink-0 flex items-center gap-4 group cursor-pointer" 
           >
             <img 
               src="/logo.png" 
               alt="Mahaveer Bouncer & Security Logo" 
-              className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-xl border border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 hover:scale-105 hover:border-amber-500/70 hover:shadow-[0_0_25px_rgba(245,158,11,0.55)]" 
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]" 
             />
-            <div className="flex flex-col text-left">
-              <span className="text-lg sm:text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none">MAHAVEER</span>
-              <span className="text-[9px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] text-zinc-500 font-bold uppercase mt-1 sm:mt-2">Bouncer & Security</span>
+            <div className="hidden sm:flex flex-col text-left">
+              <span className="text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                MAHAVEER
+              </span>
+              <span className="text-xs tracking-[0.2em] text-zinc-400 font-black uppercase mt-2 transition-colors group-hover:text-white">
+                Bouncer & Security
+              </span>
             </div>
           </Link>
 
