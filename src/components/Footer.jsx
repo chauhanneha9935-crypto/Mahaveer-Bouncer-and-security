@@ -24,7 +24,7 @@ export default function Footer() {
           </p>
           <div className="space-y-3 text-slate-300 text-sm font-semibold text-left">
             <p className="flex items-start"><span className="text-amber-500 font-bold mr-2">📍</span> Amethi, Uttar Pradesh, India</p>
-            <p className="flex items-center"><span className="text-amber-500 font-bold mr-2">📞</span> +91 98765 43210</p>
+            <p className="flex items-center"><span className="text-amber-500 font-bold mr-2">📞</span> +91 98765xxxxxx</p>
             <p className="flex items-center"><span className="text-amber-500 font-bold mr-2">✉️</span> info@mahaveersecurity.com</p>
           </div>
         </div>

@@ -71,9 +71,9 @@ export default function Hero() {
       <div className="absolute top-[20%] left-[5%] w-96 h-96 bg-amber-500/5 rounded-full blur-[130px] pointer-events-none"></div>
       <div className="absolute bottom-[25%] right-[5%] w-[32rem] h-[32rem] bg-amber-600/5 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="w-full flex flex-col space-y-8 sm:space-y-14 md:space-y-24">
-        <div className="w-full flex flex-col items-center select-none overflow-hidden pt-0 pb-4 sm:pt-2 sm:pb-8 md:pt-4 md:pb-10 relative">
-          <div className="relative flex items-center justify-center w-full h-[48vh] sm:h-[60vh] md:h-[75vh]">
+      <div className="w-full flex flex-col space-y-6 sm:space-y-14 md:space-y-24">
+        <div className="w-full flex flex-col items-center select-none overflow-hidden pt-0 pb-2 sm:pt-2 sm:pb-8 md:pt-4 md:pb-10 relative">
+          <div className="relative flex items-center justify-center w-full h-[38vh] sm:h-[55vh] md:h-[75vh]">
             {fullScreenBodyguards.map((imgSrc, idx) => {
               let offset = idx - topActiveSlide;
               if (offset < -2) offset += fullScreenBodyguards.length;
@@ -90,9 +90,9 @@ export default function Hero() {
               );
             })}
           </div>
-          <div className="flex items-center space-x-4 sm:space-x-6 mt-4 sm:mt-6 md:mt-8 z-30">
-            <button onClick={handlePrevTop} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">←</button>
-            <button onClick={handleNextTop} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">→</button>
+          <div className="flex items-center space-x-4 sm:space-x-6 mt-3 sm:mt-6 md:mt-8 z-30">
+            <button onClick={handlePrevTop} className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer text-xs sm:text-base">←</button>
+            <button onClick={handleNextTop} className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer text-xs sm:text-base">→</button>
           </div>
         </div>
 

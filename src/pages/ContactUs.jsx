@@ -78,7 +78,7 @@ export default function ContactUs() {
                   <div>
                     <h4 className="text-xs font-mono font-black text-zinc-500 tracking-wider uppercase">Hotline Support</h4>
                     <p className="text-sm font-bold text-zinc-300 mt-1 hover:text-amber-400 transition-colors">
-                      +91 98765 43210
+                      +91 98765xxxxxx
                     </p>
                   </div>
                 </div>
