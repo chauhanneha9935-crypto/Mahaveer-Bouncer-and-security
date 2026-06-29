@@ -48,7 +48,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden">
+    <section className="pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden">
       <style>{`
         @keyframes modal-center-zoom {
           0% { transform: scale(0.92); opacity: 0; }

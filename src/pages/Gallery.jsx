@@ -27,7 +27,7 @@ export default function Gallery() {
   const filteredItems = activeFilter === 'all' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-24 bg-[#050505] text-neutral-100 relative">
+    <section id="gallery" className="pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#050505] text-neutral-100 relative">
       <div className="max-w-7xl mx-auto px-4">
         
         <div className="mb-16">

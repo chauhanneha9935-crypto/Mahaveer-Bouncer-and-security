@@ -19,7 +19,7 @@ export default function BookingForm() {
   };
 
   return (
-    <section id="booking" className="py-24 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden">
+    <section id="booking" className="pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden">
       {/* Background Matrix Grid Layout Accent Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 pointer-events-none"></div>
       

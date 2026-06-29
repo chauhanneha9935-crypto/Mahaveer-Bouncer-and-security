@@ -22,18 +22,18 @@ export default function Navbar() {
           <Link 
             to="/" 
             onClick={() => setIsOpen(false)} 
-            className="flex-shrink-0 flex items-center gap-4 group cursor-pointer" 
+            className="flex-shrink-0 flex items-center gap-2.5 sm:gap-4 group cursor-pointer" 
           >
             <img 
               src="/logo.png" 
               alt="Mahaveer Bouncer & Security Logo" 
-              className="h-16 w-16 sm:h-20 sm:w-20 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]" 
+              className="h-12 w-12 sm:h-20 sm:w-20 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]" 
             />
-            <div className="hidden sm:flex flex-col text-left">
-              <span className="text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <div className="flex flex-col text-left">
+              <span className="text-lg sm:text-2xl md:text-3xl font-black tracking-wider text-amber-500 leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 MAHAVEER
               </span>
-              <span className="text-xs tracking-[0.2em] text-zinc-400 font-black uppercase mt-2 transition-colors group-hover:text-white">
+              <span className="text-[9px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] text-zinc-400 font-black uppercase mt-1 sm:mt-2 transition-colors group-hover:text-white">
                 Bouncer & Security
               </span>
             </div>

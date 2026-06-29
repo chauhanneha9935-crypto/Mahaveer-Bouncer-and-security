@@ -168,7 +168,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-24 bg-[#050505] text-neutral-100 relative overflow-hidden">
+    <section id="why-choose-us" className="pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#050505] text-neutral-100 relative overflow-hidden">
       <style>{`
         @keyframes modal-center-zoom {
           0% { transform: scale(0.92); opacity: 0; }

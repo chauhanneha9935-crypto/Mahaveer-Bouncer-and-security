@@ -66,14 +66,14 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center bg-[#0a0a0a] text-white overflow-hidden pt-24 pb-16" style={{ perspective: '1200px' }}>
+    <section id="home" className="relative min-h-screen flex flex-col justify-center bg-[#0a0a0a] text-white overflow-hidden pt-20 sm:pt-20 pb-10 sm:pb-16" style={{ perspective: '1200px' }}>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40 pointer-events-none"></div>
       <div className="absolute top-[20%] left-[5%] w-96 h-96 bg-amber-500/5 rounded-full blur-[130px] pointer-events-none"></div>
       <div className="absolute bottom-[25%] right-[5%] w-[32rem] h-[32rem] bg-amber-600/5 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="w-full flex flex-col space-y-16 md:space-y-24">
-        <div className="w-full flex flex-col items-center select-none overflow-hidden py-10 relative">
-          <div className="relative flex items-center justify-center w-full h-[60vh] md:h-[75vh]">
+      <div className="w-full flex flex-col space-y-8 sm:space-y-14 md:space-y-24">
+        <div className="w-full flex flex-col items-center select-none overflow-hidden pt-0 pb-4 sm:pt-2 sm:pb-8 md:pt-4 md:pb-10 relative">
+          <div className="relative flex items-center justify-center w-full h-[48vh] sm:h-[60vh] md:h-[75vh]">
             {fullScreenBodyguards.map((imgSrc, idx) => {
               let offset = idx - topActiveSlide;
               if (offset < -2) offset += fullScreenBodyguards.length;
@@ -90,18 +90,18 @@ export default function Hero() {
               );
             })}
           </div>
-          <div className="flex items-center space-x-6 mt-8 z-30">
-            <button onClick={handlePrevTop} className="w-12 h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">←</button>
-            <button onClick={handleNextTop} className="w-12 h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">→</button>
+          <div className="flex items-center space-x-4 sm:space-x-6 mt-4 sm:mt-6 md:mt-8 z-30">
+            <button onClick={handlePrevTop} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">←</button>
+            <button onClick={handleNextTop} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-zinc-800 bg-neutral-950/80 text-white flex items-center justify-center hover:border-amber-500/50 hover:text-amber-400 transition-all active:scale-95 cursor-pointer">→</button>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="flex flex-col space-y-6 sm:space-y-8 text-center lg:text-left order-1 lg:order-1 lg:col-span-7">
-            <div className="self-center lg:self-start border border-amber-500/30 bg-[#161107] px-5 py-2 rounded-full font-bold tracking-widest text-xs text-amber-400 uppercase shadow-[0_0_15px_rgba(245,158,11,0.05)]">PAN-INDIA DEPLOYMENT • 24x7</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left order-1 lg:order-1 lg:col-span-7">
+            <div className="self-center lg:self-start border border-amber-500/30 bg-[#161107] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full font-bold tracking-wider sm:tracking-widest text-[10px] sm:text-xs text-amber-400 uppercase shadow-[0_0_15px_rgba(245,158,11,0.05)]">PAN-INDIA DEPLOYMENT • 24x7</div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-tight select-none text-white">Professional Security <br /> Solutions for <span className="text-amber-500">Every <br /> Need</span></h1>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0 font-semibold">Highly trained Security Guards, Bouncers, Event Staff, VIP Protection & Corporate Security — verified, uniformed and ready to deploy.</p>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-2 w-full max-w-xs sm:max-w-md mx-auto lg:mx-0">
+            <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0 font-semibold px-2 sm:px-0">Highly trained Security Guards, Bouncers, Event Staff, VIP Protection & Corporate Security — verified, uniformed and ready to deploy.</p>
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full max-w-xs sm:max-w-md mx-auto lg:mx-0">
               <a href="/inquiry" className="group relative w-full sm:w-auto rounded-xl bg-neutral-900 font-medium text-white uppercase tracking-wider text-xs sm:text-sm transition-all duration-100 h-14 flex-1">
                 <span className="absolute inset-0 w-full h-full rounded-xl bg-neutral-950 transform translate-y-1 group-hover:translate-y-1.5 group-active:translate-y-0 transition-transform"></span>
                 <span className="relative block px-6 py-4 rounded-xl bg-neutral-900 border border-neutral-700 transform -translate-y-0.5 group-hover:-translate-y-1 group-active:translate-y-0 transition-transform text-center whitespace-nowrap hover:text-amber-400 transition-colors">Request Security Staff →</span>
@@ -114,7 +114,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center justify-center order-2 lg:order-2 lg:col-span-5 w-full">
-            <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center select-none group">
+            <div className="relative w-full max-w-[310px] sm:max-w-[420px] aspect-square flex items-center justify-center select-none group">
               <div className="absolute w-[100%] h-[100%] border border-zinc-900 rounded-full pointer-events-none"></div>
               <div className="absolute w-[82%] h-[82%] border border-zinc-900/60 rounded-full pointer-events-none"></div>
               <div className="absolute w-[64%] h-[64%] border border-dashed border-zinc-900/40 rounded-full pointer-events-none"></div>

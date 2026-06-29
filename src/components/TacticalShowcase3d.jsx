@@ -31,7 +31,7 @@ export default function TacticalShowcase3D() {
   ];
 
   return (
-    <section className="py-24 bg-neutral-950 text-white overflow-hidden" style={{ perspective: '1200px' }}>
+    <section className="py-12 sm:py-16 md:py-20 bg-neutral-950 text-white overflow-hidden" style={{ perspective: '1200px' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 gap-6 max-w-xl mx-auto lg:mx-0 text-left mb-24 border-b border-neutral-900 pb-12">
           <div>

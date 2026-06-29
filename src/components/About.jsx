@@ -45,7 +45,7 @@ export default function About() {
 
   return (
     <section
-      className="py-24 bg-[#050505] text-neutral-100 overflow-hidden border-b border-zinc-900"
+      className="py-12 sm:py-16 md:py-20 bg-[#050505] text-neutral-100 overflow-hidden border-b border-zinc-900"
       style={{ perspective: "1200px" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

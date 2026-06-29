@@ -19,7 +19,7 @@ export default function ContactUs() {
 
   return (
     /* FIXED: Drawn a solid dark zinc-900 baseline separator border to frame the top entry line of your global footer */
-    <section id="contact-us" className="py-28 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden border-b-2 border-zinc-900">
+    <section id="contact-us" className="pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#0a0a0a] text-neutral-100 relative overflow-hidden border-b-2 border-zinc-900">
       {/* Background Precision Grid Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 pointer-events-none"></div>
       
